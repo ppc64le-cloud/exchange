@@ -1,0 +1,58 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: foo
+spec:
+  type: NodePort
+  ports:
+    - name: http
+      nodePort: 30950
+      port: 8080
+  selector:
+    app: my-app
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: game-demo
+data:
+  config.yaml:
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: my-app
+  name: my-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - image: localhost:5000/my-image
+        name: my-image
+        ports:
+          - containerPort: 8080
+        resources: {}
+        volumeMounts:
+          - name: config
+            mountPath: "/etc/exchange"
+            readOnly: true
+      volumes:
+        - name: config
+          configMap:
+            name: game-demo
+            items:
+              - key: "config.yaml"
+                path: "config.yaml"
+status: {}

@@ -1,0 +1,10 @@
+# secret used for the storing the sessions
+store_key: "secret"
+# issuer url from the keycloak
+issuer_url: ""
+# app's root url
+client_url: ""
+# client id from the keycloak
+client_id: ""
+# client secret from the keycloak
+client_secret: ""
