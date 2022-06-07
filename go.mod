@@ -6,7 +6,7 @@ require (
 	github.com/coreos/go-oidc v2.2.1+incompatible
 	github.com/davecgh/go-spew v1.1.1
 	github.com/gin-contrib/sessions v0.0.5
-	github.com/gin-gonic/gin v1.8.0
+	github.com/gin-gonic/gin v1.8.1
 	github.com/google/uuid v1.3.0
 	github.com/spf13/cobra v1.4.0
 	github.com/spf13/viper v1.12.0
