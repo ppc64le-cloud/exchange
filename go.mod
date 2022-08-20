@@ -11,8 +11,8 @@ require (
 	github.com/spf13/cobra v1.5.0
 	github.com/spf13/viper v1.12.0
 	golang.org/x/oauth2 v0.0.0-20220411215720-9780585627b5
-	k8s.io/apimachinery v0.24.2
-	k8s.io/client-go v0.24.2
+	k8s.io/apimachinery v0.24.4
+	k8s.io/client-go v0.24.4
 )
 
 require (
@@ -72,7 +72,7 @@ require (
 	gopkg.in/square/go-jose.v2 v2.6.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0 // indirect
-	k8s.io/api v0.24.2 // indirect
+	k8s.io/api v0.24.4 // indirect
 	k8s.io/klog/v2 v2.60.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20220328201542-3ee0da9b0b42 // indirect
 	k8s.io/utils v0.0.0-20220210201930-3a6ce19ff2f9 // indirect
